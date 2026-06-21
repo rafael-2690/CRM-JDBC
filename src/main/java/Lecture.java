@@ -4,7 +4,7 @@ public class Lecture {
     private int id;
     private String title;
     private String speaker;
-    private LocalDate date;
+    private LocalDate data;
 
 
     public int getId() {
@@ -24,11 +24,11 @@ public class Lecture {
     }
 
     public LocalDate getDate() {
-        return date;
+        return data;
     }
 
     public void setDate(LocalDate date) {
-        this.date = date;
+        this.data = date;
     }
 
     public String getSpeaker() {

@@ -1,16 +1,21 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class LectureManager {
     public static void main(String[] args) {
-        Lecture lecture1 = new Lecture();
 
-        lecture1.setSpeaker("Rafael");
-        lecture1.setTitle("Palestra sobre Java");
-        lecture1.setDate(LocalDate.of(2026, 6, 20));
 
-        System.out.println(lecture1.getTitle());
-        System.out.println(lecture1.getSpeaker());
-        System.out.println(lecture1.getDate());
+        LectureDAO dao = new LectureDAO();
 
+        List<Lecture> lectures = dao.lista();
+
+        for(Lecture l : lectures){
+            System.out.println("---------");
+            System.out.println(l.getTitle());
+            System.out.println(l.getDate());
+            System.out.println(l.getSpeaker());
+            System.out.println(l.getId());
+        }
     }
 }
